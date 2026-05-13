@@ -69,7 +69,7 @@ h3 {
   font-size: 2vw;
 }
 
-h4 {
+h4, a {
   font-size: 1.75vw;
 }
 
@@ -221,10 +221,13 @@ button {
   position-anchor: --menu-button;
   top: anchor(bottom);
   right: anchor(right);
+  margin: 0;
+  margin-left: auto;
 }
 
 #menu:popover-open {
   display: grid;
+  gap: 10px;
 }
 
 
