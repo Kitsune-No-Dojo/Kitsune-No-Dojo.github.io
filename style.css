@@ -29,7 +29,6 @@
 
 * {
   box-sizing: border-box;
-  corner-shape: squircle;
 }
 
 body {
@@ -209,6 +208,23 @@ button {
   top: 10px;
   right: 10px;
   padding: 15px 30px;
+  anchor-name: --menu-button;
+}
+
+#menu {
+  width: max-content;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background: var(--secondary-background-color);
+  padding: 20px;
+  position: absolute;
+  position-anchor: --menu-button;
+  top: anchor(bottom);
+  right: anchor(right);
+}
+
+#menu:popover-open {
+  display: grid;
 }
 
 
