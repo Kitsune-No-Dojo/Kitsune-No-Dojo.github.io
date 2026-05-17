@@ -13,6 +13,23 @@
   src: url('assets/ProtestGuerrilla.ttf') format('truetype');
 }
 
+@media (max-width: 992px) {
+  .description-container {
+    padding: 50px 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .description-container svg {
+    display: none;
+  }
+
+  .description {
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+}
+
 :root {
   --text-color-1: #ffffff;
   --text-color-2: #afb6be;
@@ -58,40 +75,62 @@ a{
 }
 
 h1 {
-  font-size: 4vw;
+  font-size: max(4vw, 4rem);
 }
 
 h2 {
-  font-size: 3vw;
+  font-size: max(3vw, 3rem);
 }
 
 h3 {
-  font-size: 2vw;
+  font-size: max(2vw, 2rem);
 }
 
-h4, a {
-  font-size: 1.75vw;
+h4 {
+  font-size: max(1.75vw, 1.75rem);
 }
 
 h5 {
-  font-size: 1.5vw;
+  font-size: max(1.5vw, 1.5rem);
 }
 
-h6 {
-  font-size: 1.25vw;
+h6, a {
+  font-size: max(1.25vw, 1.25rem);
+}
+
+p {
+  font-size: max(1vw, 1rem);
 }
 
 button {
-  font-size: 1.25vw;
+  font-size: max(1.25vw, 1rem);
   background: var(--secondary-background-color);
   border: var(--border);
   border-radius: var(--border-radius);
   cursor: pointer;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
 .logo{
-  margin: 50px;
-  height: 200px;
+  margin: 0px auto;
+  height: 10vw;
+  max-height: 150px
+}
+
+.logo:nth-child(1) {
+  margin-left: 200px;
+}
+
+.logo:nth-child(2) {
+  margin: 0 20px;
+}
+
+.logo:nth-child(3) {
+  margin-right: 200px;
 }
 
 .title {
@@ -148,7 +187,7 @@ button {
 
 .socials-container a {
   background-color: white;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 50%;
   flex-shrink: 0;
   display: grid;
@@ -205,10 +244,10 @@ button {
 /*  Menu  */
 .menu-button {
   position: fixed;
+  margin-left: auto;
   top: 10px;
   right: 10px;
   padding: 15px 30px;
-  anchor-name: --menu-button;
 }
 
 #menu {
@@ -219,8 +258,8 @@ button {
   padding: 20px;
   position: absolute;
   position-anchor: --menu-button;
-  top: anchor(bottom);
-  right: anchor(right);
+  top: 75px;
+  right: 10px;
   margin: 0;
   margin-left: auto;
 }
